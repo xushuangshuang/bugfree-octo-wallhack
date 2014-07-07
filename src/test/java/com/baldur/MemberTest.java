@@ -1,10 +1,11 @@
 package com.baldur;
 
 import com.unit.XuShuangShuangJunit;
+import com.baldur.google.Member;
 
 public class MemberTest extends XuShuangShuangJunit
 {
-	pubic void test_benben_should_be_benben()
+	public void test_benben_should_be_benben()
 	{
 		Member member = new Member();
 		String benben = "benben";
