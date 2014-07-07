@@ -17,4 +17,15 @@ public class MemberServiceTest extends XuShuangShuangJunit
 		
 		assertTrue(memberDao.saveHasInvoked);
 	}
+
+	public void test_username_is_empty_should_not_save()
+	{
+		Member member = new Member();
+		member.setUsername("  ");
+		MockMemberDao memberDao = new MockMemberDao();
+		MemberService memberService = new MemberService(memberDao);
+		memberService.save(member);
+
+		assertFalse(memberDao.saveHasInvoked);
+	}
 }
