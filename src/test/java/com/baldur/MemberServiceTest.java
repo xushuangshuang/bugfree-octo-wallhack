@@ -6,15 +6,13 @@ import com.baldur.google.MemberService;
 
 public class MemberServiceTest extends XuShuangShuangJunit
 {
+	MockMemberDao memberDao = new MockMemberDao();
+	MemberService memberService = new MemberService(memberDao);
 	public void test_benben_is_not_empty_should_be_save()
 	{
 		Member member = new Member();
 		member.setUsername("benben");
-
-		MockMemberDao memberDao = new MockMemberDao();
-		MemberService memberService = new MemberService(memberDao);
 		memberService.save(member);
-		
 		assertTrue(memberDao.saveHasInvoked);
 	}
 
@@ -22,10 +20,7 @@ public class MemberServiceTest extends XuShuangShuangJunit
 	{
 		Member member = new Member();
 		member.setUsername("  ");
-		MockMemberDao memberDao = new MockMemberDao();
-		MemberService memberService = new MemberService(memberDao);
 		memberService.save(member);
-
 		assertFalse(memberDao.saveHasInvoked);
 	}
 }
