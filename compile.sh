@@ -1,11 +1,15 @@
 #!/bin/sh
 
+echo "COMPILE  START"
+
 set -e
 
-mkdir target/classes
+mkdir -p target/classes
 
-mkdir target/classes-test
+mkdir -p target/classes-test
 
 javac -d target/classes src/main/java/com/baldur/google/*.java
 
-javac -classpath "lib-test/xushuangshuangJunit-1.jar;target/classes" -d target/classes-test src/test/java/com/baldur/*.java
+javac  -d target/classes-test  -classpath "target/classes;lib-test/xushuangshuangJunit-1.jar" src/test/java/com/baldur/*.java
+
+echo "COMPILE  SUCCESS"
