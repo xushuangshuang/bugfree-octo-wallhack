@@ -9,9 +9,14 @@ public class MemberService
 		this.memberDao = memberDao;
 	}
 
-	public void save(Member member)
+	public Member save(Member member)
 	{
-		memberDao.save(member);	
+		String username = member.getUsername();
+		if(username.trim().length() > 0)
+		{
+			return memberDao.save(member);	
+		}
+		return member;
 	}
 
 
