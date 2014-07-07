@@ -17,4 +17,9 @@ public class MemberServiceTest extends BaldurGoogleTestCase
 		memberService.save(creatMemberWithUsername("  "));
 		assertFalse(memberDao.saveHasInvoked);
 	}
+	public void test_username_is_null_should_not_save()
+	{
+		memberService.save(creatMemberWithUsername(""));
+		assertFalse(memberDao.saveHasInvoked);
+	}
 }
