@@ -1,7 +1,5 @@
 #!/bin/sh
 
-echo "COMPILE  START"
-
 set -e
 
 mkdir -p target/classes
