@@ -11,4 +11,11 @@ public class BaldurGoogleTestCase extends XuShuangShuangJunit
 		member.setUsername(username);
 		return member;
 	}
+
+	Member creatMemberById(Long id)
+	{
+		Member member = new Member();
+		member.setId(id);
+		return member;
+	}
 }
