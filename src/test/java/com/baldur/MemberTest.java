@@ -1,7 +1,5 @@
 package com.baldur;
 
-import com.unit.XuShuangShuangJunit;
-
 public class MemberTest extends BaldurGoogleTestCase
 {
 	public void test_benben_should_be_benben()
