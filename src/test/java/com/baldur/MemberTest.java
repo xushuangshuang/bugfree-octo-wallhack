@@ -20,6 +20,5 @@ public class MemberTest extends BaldurGoogleTestCase
 	{
 		Long id = new Date().getTime();
 		assertEquals(id, creatMemberById(id).getId());
-	
 	}
 }
