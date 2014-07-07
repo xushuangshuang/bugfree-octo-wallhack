@@ -6,7 +6,7 @@ import com.baldur.google.MemberService;
 
 public class MemberServiceTest extends XuShuangShuangJunit
 {
-	public void test_benben_is_empty_should_be_save()
+	public void test_benben_is_not_empty_should_be_save()
 	{
 		Member member = new Member();
 		member.setUsername("benben");
