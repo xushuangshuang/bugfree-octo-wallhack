@@ -1,6 +1,6 @@
 package com.baldur.google;
 
-public class MemberDao
+public interface MemberDao
 {
-	
+	public Member save(Member member);	
 }
