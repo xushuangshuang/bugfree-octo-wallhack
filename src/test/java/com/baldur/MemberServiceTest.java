@@ -26,8 +26,6 @@ public class MemberServiceTest extends BaldurGoogleTestCase
 	{
 		memberDao.expectedMember = creatMemberByIdAndUsername(1990L,"xushuangshuang"); 
 		memberService.update(creatMemberByIdAndUsername(2000L,"benben"));
-		assertTrue(memberDao.updateHasInvoked);
 		assertEquals(2000L, memberDao.expectedMember.getId());
-		assertEquals("benben", memberDao.expectedMember.getUsername());
 	}
 }
