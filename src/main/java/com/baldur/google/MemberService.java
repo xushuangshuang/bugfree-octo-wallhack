@@ -12,7 +12,7 @@ public class MemberService
 	public Member save(Member member)
 	{
 		String username = member.getUsername();
-		if(username.trim().length() > 0)
+		if(username != null && username.trim().length() > 0)
 		{
 			return memberDao.save(member);	
 		}
