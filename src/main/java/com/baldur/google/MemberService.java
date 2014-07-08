@@ -19,5 +19,10 @@ public class MemberService
 		return member;
 	}
 
+	public Member update(Member member)
+	{
+		return memberDao.update(member);
+	}
+
 
 }
