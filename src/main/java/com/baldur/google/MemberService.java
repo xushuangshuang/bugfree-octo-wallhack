@@ -21,6 +21,7 @@ public class MemberService
 
 	public Member update(Member member)
 	{
+
 		return memberDao.update(member);
 	}
 
