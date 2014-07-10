@@ -22,7 +22,7 @@ public class MemberServiceTest extends BaldurGoogleTestCase
 		memberService.save(creatMemberWithUsername(null));
 		assertFalse(memberDao.saveHasInvoked);
 	}
-	public void valid_member_should_be_changed()
+	public void valid_member_changed_another_valid_member()
 	{
 		memberDao.expectedMember = creatMemberByIdAndUsername(1990L,"benben"); 
 		memberService.update(creatMemberByIdAndUsername(2000L,"benben"));
