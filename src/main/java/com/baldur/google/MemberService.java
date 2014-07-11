@@ -21,8 +21,13 @@ public class MemberService
 
 	public Member update(Member member)
 	{
-
-		return memberDao.update(member);
+		Member exceptMember = memberDao.getMemberById(member.getId());
+		if(member.getId().equals(exceptMember.getId()))
+		{
+			exceptMember.setUsername(member.getUsername());
+			return memberDao.update(exceptMember);
+		}
+		return member;
 	}
 
 

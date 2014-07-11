@@ -16,6 +16,15 @@ public class MockMemberDao implements MemberDao
 		saveHasInvoked = true;
 		return member;
 	}
+	public Member getMemberById(Long id)
+	{
+		if(id != null)
+		{
+			return expectedMember;
+		}
+		Member member = new Member();
+		return member = null;
+	}
 
 	public Member update(Member member)
 	{
