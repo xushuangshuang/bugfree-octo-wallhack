@@ -8,8 +8,11 @@ public class MockMemberDao implements MemberDao
 	public boolean saveHasInvoked = false;
 	public boolean updateHasInvoked = false;
 	public Member expectedMember;
+	public Member resultMember;
+
 	public Member save(Member member)
 	{
+		resultMember = member;
 		saveHasInvoked = true;
 		return member;
 	}

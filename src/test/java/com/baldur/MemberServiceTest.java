@@ -9,6 +9,7 @@ public class MemberServiceTest extends BaldurGoogleTestCase
 	public void test_username_is_valid_should_be_save()
 	{
 		memberService.save(creatMemberWithUsername("benben"));
+		assertEquals("benben", memberDao.resultMember.getUsername());
 		assertTrue(memberDao.saveHasInvoked);
 	}
 
